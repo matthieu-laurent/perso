@@ -20,7 +20,6 @@ def base_finder(nb):
         }.get(nb[1], UNIDENTIFIED_BASE)
 
 def convert_10_to_n(nb_to_convert, base):
-    base_digits="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     index=0
     converted_number = [None] * 64
     result = []#* 100# len(str(nb_to_convert))
@@ -42,5 +41,16 @@ def convert_10_to_n(nb_to_convert, base):
     end_result= ''.join(str(x) for x in end_result)
     return end_result
 
-x=convert_10_to_n(7689,10)
+def convert_n_to_10(nb_to_convert, base):
+    if base=10:
+        return nb_to_convert
+
+    index=0
+    size=len(str(nb_to_convert))
+    result=0
+    for x in xrange(size):
+        
+
+
+x=convert_10_to_n(3,2)
 print(x)
